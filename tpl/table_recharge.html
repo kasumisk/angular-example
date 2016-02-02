@@ -1,0 +1,58 @@
+<div class="bg-light lter b-b wrapper-md">
+  <ul class="breadcrumb bg-white b-a m-b-none">
+    <li><a href=""><i class="fa fa-home"></i> 首页</a></li>
+    <li><a href="">实时统计</a></li>
+    <li class="active">用户充值</li>
+  </ul>
+</div>
+<div class="wrapper-md" ng-controller="RecHargeCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-inline">
+        <div class="form-group" style="margin-bottom: 15px;">
+          <input ng-model="startTime" type="text" class="form-control" placeholder="开始时间" datepicker-popup="yyyy-MM-dd" ng-click="open($event,'start')" is-open="start" datepicker-options="dateOptions" close-text="关闭" />
+          <input ng-model="endTime" type="text" class="form-control" placeholder="结束时间" datepicker-popup="yyyy-MM-dd" ng-click="open($event,'end')" is-open="end" datepicker-options="dateOptions" close-text="关闭" />
+          <select ng-mode="plat" class="form-control">
+            <option value="0">未知</option>
+            <option value="1">android</option>
+            <option value="2">IOS</option>
+          </select>
+          <button type="button" class="btn btn-default" ng-click="updata()"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      用户充值
+    </div>
+    <div class="panel-body">
+      <tabset justified="true" class="tab-container">
+        <tab heading="图表">
+          <div >
+            <div class='online-chart' style="height:240px" >
+            </div>
+          </div>
+        </tab>
+        <tab heading="表格">
+          <div class="panel panel-default">
+            <div class="table-responsive">
+              <table id='online-table'  class="table table-striped m-b-none online-table">
+                <thead>
+                <tr>
+                  <th  style="width:20%">时间</th>
+                  <th  style="width:25%">最大值</th>
+                  <th  style="width:25%">平均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </tab>
+      </tabset>
+
+    </div>
+  </div>
+</div>

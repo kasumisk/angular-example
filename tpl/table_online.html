@@ -1,0 +1,93 @@
+
+<div class="bg-light lter b-b wrapper-md">
+  <ul class="breadcrumb bg-white b-a m-b-none">
+    <li><a href=""><i class="fa fa-home"></i> 首页</a></li>
+    <li><a href="">实时统计</a></li>
+    <li class="active">在线人数</li>
+  </ul>
+</div>
+<div class="wrapper-md" ng-controller="OnLineCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="input-group w-md">
+          <input ng-model="d1_d" type="text" class="form-control" placeholder="查询日期" datepicker-popup="yyyy-MM-dd" ng-click="open($event,'d1_o')"  is-open="d1_o" datepicker-options="dateOptions" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="updata()"><i class="glyphicon glyphicon-search"></i></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">同时在线</div>
+    <div class="panel-body">
+      <tabset justified="true" class="tab-container">
+        <tab heading="图表">
+          <div >
+            <div class='online-chart' style="height:240px" >
+            </div>
+          </div>
+        </tab>
+        <tab heading="表格">
+          <div class="panel panel-default">
+            <div class="table-responsive">
+              <table id='online-table'  class="table table-striped m-b-none online-table">
+                <thead>
+                <tr>
+                  <th  style="width:20%">时间</th>
+                  <th  style="width:25%">最大值</th>
+                  <th  style="width:25%">平均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </tab>
+      </tabset>
+
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">聊吧在线</div>
+    <div class="panel-body">
+      <tabset justified="true" class="tab-container">
+        <tab heading="图表">
+          <div >
+            <div class='online-chart' style="height:240px" >
+            </div>
+          </div>
+        </tab>
+        <tab heading="表格">
+          <div class="panel panel-default">
+            <div class="table-responsive">
+              <table  class="table table-striped m-b-none online-table">
+                <thead>
+                <tr>
+                  <th  style="width:20%">时间</th>
+                  <th  style="width:25%">最大值</th>
+                  <th  style="width:25%">平均值</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </tab>
+      </tabset>
+
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
